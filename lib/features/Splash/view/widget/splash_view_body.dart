@@ -25,7 +25,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     controller.forward();
     Future.delayed(const Duration(seconds: 4), () {
      
-      GoRouter.of(context).push(Routes.onBoardingScreen);
+      GoRouter.of(context).push(Routes.homeScreen);
     });
   }
 
@@ -46,28 +46,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
         children: [
           FadeTransition(
             opacity: animation,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Center(
-                  child: SizedBox(
-                    width: 500,
-                    child: Image.asset(
-                      'assets/images/logo.png',
-                    ),
-                  ),
-
+            child: Center(
+              child: SizedBox(
+                width: 800,
+                child: Image.asset(
+                  'assets/images/image-removebg-preview.png',
                 ),
-                Text(
-                  "AnimeCorn",
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 110, 110, 110),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
-                ),
-              ],
-              // Adjust the height as needed
+              ),
+            
             ),
           ),
         ],
